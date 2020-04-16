@@ -1,0 +1,70 @@
+str input
+int x=0
+int y=0
+echo "あなたは、あらゆる物事に意味を求めるような人間ですか？"
+echo "\c[1]はい\c[0]か\c[1]いいえ\c[0]かで答えてください。"
+input=getline(10)
+//msgbox input
+if input!="いいえ"
+    echo "では、また今度お会いしましょう。"
+	return
+endif
+
+
+int temp
+str stemp
+int char
+cls
+echo "矢印キーで操作してください。キャンセルキーで終了します"
+echo "●"
+
+loop
+    stemp=""
+    char=getchar()
+
+	if char==11
+	    break
+	endif
+	if char==2
+	    y=y+1
+	endif
+	if char==4
+	    x=x-1
+	endif
+	if char==6
+	    x=x+1
+	endif
+	if char==8
+	    y=y-1
+	endif
+	if y<0
+	    y=0
+	endif
+	if x<0
+	    x=0
+	endif
+	//msgbox "char="+char
+	if char<10
+	    temp=x
+	    loop
+	        if temp==0
+	    	    break
+	    	endif
+	    	temp=temp-1
+	    	stemp=stemp+"  "
+	    next
+	    temp=y
+	    cls
+	    echo "矢印キーで操作してください。キャンセルキーで終了します"+char
+	    loop
+	        if temp==0
+	    	    break
+	    	endif
+	    	temp=temp-1
+	    	echo 
+	    next
+	    echo stemp+"●"
+	endif
+next
+echo
+echo "終了します"
