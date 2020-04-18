@@ -6,7 +6,7 @@ WOLF RPGエディター用のコマンドラインインタフェース（CLI）
 
 # Usage
 
-There seem to be no (official) way to convert Wolf RPG event code to text and reverse, precisely without data loss (quotation mark escaping issue: if your event code contains "<dqrt>", after copying the event code to text and pasting it back, <dqrt> will become `"`).
+There seem to be no (official) way to convert Wolf RPG event code to text and reverse, precisely without data loss (quotation mark escaping issue: if your event code contains "&lt;dqrt&gt;", after copying the event code to text and pasting it back, <dqrt> will become `"`).
 
 Therefore, please download a Wolf RPG Editor 2.24, and put the `CommonEvent.dat` into `Data/BasicData/` to view the event code in the editor.
 
